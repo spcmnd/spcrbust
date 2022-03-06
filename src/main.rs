@@ -24,7 +24,7 @@ async fn main() -> Result<(), reqwest::Error> {
     let word_list = args.word_list;
     let extensions: Vec<&str> = match args.extensions {
         None => Vec::new(),
-        Some(ref x) => x.split(",").collect(),
+        Some(ref x) => x.split(',').collect(),
     };
 
     if let Ok(lines) = lib::read_lines(word_list) {
